@@ -2,7 +2,7 @@ import React from 'react'
 import HeroBg from "../assets/herobg1.avif"
 import chk1h from '/chk1h.png'
 import Hero from '../components/Hero'
-import heroVideo from '../assets/homevideo.mp4'
+import homeVideo from '../assets/homevideo.mp4'
 import { MoveRight} from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
@@ -19,7 +19,7 @@ const Home = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover"
           >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={homeVideo} type="video/mp4" />
         </video>
         <div className='bg-black/30 h-full w-full absolute'></div>
         <div
