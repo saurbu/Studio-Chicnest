@@ -51,6 +51,7 @@ const Office = () => {
       {
         selectedImage && (
           <div 
+          onClick={closeModal}
           data-aos="fade-up"
           className={`fixed inset-0 z-50 flex items-center justify-center p-5 transition-all duration-300
             ${

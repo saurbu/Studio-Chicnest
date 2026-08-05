@@ -299,6 +299,7 @@ const blogs = [
 
       {selectedBlog && (
         <div 
+        onClick={closeModal}
         data-aos="fade-up"
         className={`fixed inset-0 z-50 flex items-center justify-center p-5 transition-all duration-300
           ${
@@ -307,7 +308,8 @@ const blogs = [
               : "opacity-100 scale-100"
           }`}>
 
-          <div className="relative bg-white rounded-3xl w-full max-w-6xl h-[85vh] overflow-hidden">
+          <div className="relative bg-white rounded-3xl w-full max-w-6xl h-[85vh] overflow-hidden"
+           onClick={(e) => e.stopPropagation()}>
             <button
               onClick={closeModal}
               className={`absolute right-5 top-5 text-xl border py-2 px-3.5  bg-white/60 border-gray-400 rounded-full cursor-pointer hidden md:block transition-transform duration-300 
