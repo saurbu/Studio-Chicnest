@@ -9,8 +9,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollTop from './components/ScrollTop'
-import Gallery from './pages/Gallery'
-import All from './components/gallery/all'
+import Gallery from './pages/Gallery.jsx'
+import All from './components/gallery/All'
 import Kitchen from './components/gallery/Kitchen'
 import Bedroom from './components/gallery/Bedroom'
 import Wardrobes from './components/gallery/wardrobes'
