@@ -4,31 +4,40 @@ import ContactCard from '../components/ContactCard'
 
 const Contact =   () => {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e)=>{
     e.preventDefault()
+    if (loading) return 
+    
+    setLoading(true)
+    
+    try{
+      const formData = new FormData(e.target) 
+      const object = Object.fromEntries(formData)
+      const json = JSON.stringify(object)
 
-    const formData = new FormData(e.target) 
-    const object = Object.fromEntries(formData)
-    const json = JSON.stringify(object)
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept:"application/json" 
+        },
+        body: json
+      })
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept:"application/json" 
-      },
-      body: json
-    })
+      const result = await response.json()
 
-    const result = await response.json()
-
-    if(result.success){
-      setSubmitted(true)
-      e.target.reset()
+      if(result.success){
+        setSubmitted(true)
+        e.target.reset()
+      }
+      setTimeout(() => {
+        setSubmitted(false)
+      }, 2000)
+    } finally {
+      setLoading(false)
     }
-    setTimeout(() => {
-      setSubmitted(false)
-    }, 2000);
   }
   return (
     <div 
@@ -127,7 +136,8 @@ const Contact =   () => {
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Phone Number"
+                  placeholder="Phone Number" 
+                  maxlength="10"
                   className="border p-3 rounded w-full"
                 />
 
@@ -141,9 +151,10 @@ const Contact =   () => {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="hover:bg-black hover:text-white cursor-pointer px-6 py-3 rounded transition-all duration-600 bg-white text-black"
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
