@@ -16,7 +16,7 @@ const Footer = () => {
         <div 
         onClick={() => navigate("/")}
         >
-          <div className="flex gap-3 cursor-pointer">
+          <div className="flex flex-wrap gap-3 cursor-pointer">
                 <img src={Chk}
                   className='w-10 h-10 ' 
                   alt="" />
@@ -28,7 +28,7 @@ const Footer = () => {
                   <p className=" mt-2">Your Dream Our Design!</p>
               </div>
 
-        <div>
+        <div className="">
           <h3 className="font-bold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm text-amber-800 font-semibold w-fit">
             <li onClick={() => navigate("/")} className="cursor-pointer hover:text-white">Home</li>
@@ -69,7 +69,7 @@ const Footer = () => {
 
       </div>
 
-      <div className="border-t flex justify-center gap-20 border-amber-950 items-center py-4 text-center text-amber-900 text-sm">
+      <div className="border-t flex justify-center gap-10 px-5 border-amber-950 items-center py-4 text-center text-amber-900 text-sm">
         © {new Date().getFullYear()} STUDIO CHICNEST. All rights reserved.
         <p>||</p>
         <p>Design and Developed by <a href="https://saurbu.vercel.app/" 
