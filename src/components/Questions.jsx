@@ -48,9 +48,9 @@ const Questions = () => {
             <SwiperSlide key={index}
             className="flex justify-center"
             >
-              <div className="bg-[#E9D8C7]/60 rounded-3xl m-5 p-6 shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 w-[90%] md:w-[70%] mx-auto ">
+              <div className="bg-[#E9D8C7]/60 rounded-3xl m-5 p-6  shadow-[0_0_15px_rgba(0,0,0,0.1)] hover:-translate-y-2 transition-all duration-500 w-[90%] md:h-fit h-55 md:w-[70%] mx-auto ">
 
-                <div className="flex items-center h-20 leading-8.5">
+                <div className="flex flex-col items-center justify-start h-20 md:leading-8.5">
 
                   <div>
                     <h3 className="font-bold text-amber-950 text-xl">
