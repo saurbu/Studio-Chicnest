@@ -2,7 +2,7 @@ import React from 'react'
 import HeroBg from "../assets/herobg1.avif"
 import chk1h from '/chk1h.png'
 import Hero from '../components/Hero'
-import homeVideo from '../assets/homevideo.mp4'
+import homeVideo from '../assets/homeVideo.mp4'
 import { MoveRight} from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
