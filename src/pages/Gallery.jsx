@@ -1,5 +1,5 @@
 import React from 'react'
-import heroVideo2 from '../assets/herovideo2.mp4'
+import heroVideo2 from '../assets/heroVideo2.mp4'
 import { NavLink, Outlet } from 'react-router-dom'
 const Gallery = () => {
 
