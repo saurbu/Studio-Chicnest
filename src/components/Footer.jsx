@@ -69,10 +69,13 @@ const Footer = () => {
 
       </div>
 
-      <div className="border-t border-amber-950 py-4 text-center text-amber-900 text-sm">
+      <div className="border-t flex justify-center gap-20 border-amber-950 items-center py-4 text-center text-amber-900 text-sm">
         © {new Date().getFullYear()} STUDIO CHICNEST. All rights reserved.
-
-        <p>Design and Developed by <a href="">saurbu</a></p>
+        <p>||</p>
+        <p>Design and Developed by <a href="https://saurbu.vercel.app/" 
+        className="text-red-500 text-xl" 
+        target="_blank"
+        >"saurbu"</a></p>
       </div>
 
     </footer>
