@@ -2,10 +2,19 @@ import React, { useEffect, useState } from 'react'
 import galleryData from '../../data/gallery'
 const Bedroom = () => {
   const [selectedImage, setSelectedImage] = useState(null)
+  const [closing, setClosing] = useState(false)
   const Bedroom = galleryData.filter(
     (item) => item.category === "Bedroom" 
   )
-
+    
+    const closeModal = () => {
+      setClosing(true)
+  
+      setTimeout(() => {
+        setSelectedImage(null)
+        setClosing(false)
+      }, 300)
+    }
     useEffect(()=>{
       if(selectedImage){
         document.body.style.overflow = "hidden"
@@ -41,20 +50,25 @@ const Bedroom = () => {
       {
         selectedImage && (
           <div 
-          onClick={()=> setSelectedImage(null)}
-          className='fixed inset-0 z-50 flex items-center justify-center p-5 bg-black/60'>
+          data-aos="fade-up"
+          className={`fixed inset-0 z-50 flex items-center justify-center p-5 transition-all duration-300
+            ${
+              closing
+                ? "opacity-0 scale-95"
+                : "opacity-100 scale-100"
+            }`}>
             <div 
             onClick={(e) => e.stopPropagation()}
             className='relative bg-white lg:max-w-6xl h-auto max-h-[85vh] overflow-y-auto scrollbar-none overflow-hidden rounded-2xl'>
               <button
-              onClick={()=> setSelectedImage(null)}
-              className='absolute right-5 top-5 text-3xl z-20 cursor-pointer hidden md:block'
+              onClick={closeModal}
+              className={`absolute right-5 top-5 text-xl border py-2 px-3.5  bg-white/60 border-gray-400 rounded-full cursor-pointer hidden md:block transition-transform duration-300 
+                ${closing ? "rotate-90" : "rotate-0"}`}
               >✕</button>
 
               <div className='flex flex-col lg:flex-row'>
                 <div className='relative bg-gray-200 overflow-hidden'>
                     <img src={selectedImage.image} 
-                    data-aos="fade-up"
                     loading='lazy'
                     className=' max-h-[90vh] md:max-w-[70vw] w-auto h-auto object-contain hover:scale-110 transition-all duration-700'
                     alt={selectedImage.category} />

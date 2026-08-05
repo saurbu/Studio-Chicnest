@@ -35,7 +35,16 @@ const Blog = () => {
 
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
+  const [closing, setClosing] = useState(false)
+  
+  const closeModal = () => {
+    setClosing(true)
 
+    setTimeout(() => {
+      setSelectedBlog(null)
+      setClosing(false)
+    }, 300)
+  }
   const blogCards = [
   {
     type: "image",
@@ -249,6 +258,7 @@ const blogs = [
               <img
                 src={card.image}
                 loading="lazy"
+                
                 alt={card.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -288,15 +298,21 @@ const blogs = [
 
 
       {selectedBlog && (
-        <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-5">
+        <div 
+        data-aos="fade-up"
+        className={`fixed inset-0 z-50 flex items-center justify-center p-5 transition-all duration-300
+          ${
+            closing
+              ? "opacity-0 scale-95"
+              : "opacity-100 scale-100"
+          }`}>
 
           <div className="relative bg-white rounded-3xl w-full max-w-6xl h-[85vh] overflow-hidden">
             <button
-              onClick={() => setSelectedBlog(null)}
-              className="absolute right-5 top-5 text-3xl z-20 cursor-pointer"
-            >
-              ✕
-            </button>
+              onClick={closeModal}
+              className={`absolute right-5 top-5 text-xl border py-2 px-3.5  bg-white/60 border-gray-400 rounded-full cursor-pointer hidden md:block transition-transform duration-300 
+                ${closing ? "rotate-90" : "rotate-0"}`}
+              >✕</button>
 
             <div className="grid md:grid-cols-2 h-full">
               <div className="relative h-[350px] md:h-[85vh] bg-gray-200 overflow-hidden">
