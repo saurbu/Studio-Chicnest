@@ -13,7 +13,7 @@ import Gallery from './pages/Gallery.jsx'
 import All from './components/gallery/All'
 import Kitchen from './components/gallery/Kitchen'
 import Bedroom from './components/gallery/Bedroom'
-import Wardrobes from './components/gallery/wardrobes'
+import Wardrobes from './components/gallery/Wardrobes'
 import Living from './components/gallery/Living'
 import Office from './components/gallery/Office'
 
