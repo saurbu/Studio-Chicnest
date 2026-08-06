@@ -7,8 +7,8 @@ import { FaLinkedin } from "react-icons/fa";
 
 const ContactCard = () => {
     const contact = [
-        {icon : <Phone size={20}/> ,h:  "Call Us" ,p: (<><a href="tel:+91 98765 43210" className='text-[#8B4513]'>+91 9560870671</a></>)},
-        {icon : <Mail size={20}/>, h: "Email Us", p: (<><a href="mailto:xyz@gmail.com" className='text-[#8B4513]'>ds144169@gmail.com</a></>)},
+        {icon : <Phone size={20}/> ,h:  "Call Us" ,p: (<><a href="tel:+91 9560870671" className='text-[#8B4513]'>+91 9560870671</a></>)},
+        {icon : <Mail size={20}/>, h: "Email Us", p: (<><a href="mailto:ds144169@gmail.com?subject=Interior Design Inquiry" className='text-[#8B4513]'>ds144169@gmail.com</a></>)},
         {icon : <MapPin size={20}/>, h: "Location", p: "New Delhi"},
         {icon : <Clock size={20}/>, h: "Working Hours", p: (<>Monday – Saturday: 10:00 AM – 6:00 PM</>)},
     ]
