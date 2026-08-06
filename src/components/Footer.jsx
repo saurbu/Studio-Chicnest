@@ -59,9 +59,9 @@ const Footer = () => {
             <div className='px-5 flex  md:justify-start gap-2  items-center mt-5 text-amber-950'
             data-aos="fade-up"
             >
-                <a href="" className='hover:text-[#E1306C]'><FaSquareInstagram size={35}/></a>
-                <a href="" className='hover:text-[#1877F2]'><FaSquareFacebook size={35}/></a>
-                <a href="" className='hover:text-[#0A66C2]'><FaLinkedin size={35}/></a>
+                <a href="https://www.instagram.com/studio_chicnest/" target="_blank" className='hover:text-[#E1306C]'><FaSquareInstagram size={35}/></a>
+                {/* <a href="" className='hover:text-[#1877F2]'><FaSquareFacebook size={35}/></a> */}
+                {/* <a href="" className='hover:text-[#0A66C2]'><FaLinkedin size={35}/></a> */}
             </div>
 
           </ul>
@@ -72,10 +72,17 @@ const Footer = () => {
       <div className="border-t flex justify-center gap-10 px-5 border-amber-950 items-center py-4 text-center text-amber-900 text-sm">
         © {new Date().getFullYear()} STUDIO CHICNEST. All rights reserved.
         <p>||</p>
-        <p>Design and Developed by <a href="https://saurbu.vercel.app/" 
-        className="text-red-500 text-xl hover:text-2xl" 
-        target="_blank"
-        >"saurbu"</a></p>
+        <p>
+          Design and Developed by {" "}
+          <a
+            href="https://saurbu.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-red-500 text-xl transition-transform duration-300 hover:scale-115 hover:text-red-600"
+          >
+            saurbu
+          </a>
+        </p>
       </div>
 
     </footer>
