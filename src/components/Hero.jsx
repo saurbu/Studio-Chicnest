@@ -1,25 +1,16 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { MoveRight, Star} from 'lucide-react'
-import Resi from '../assets/resi.jpg'
-import Comi from '../assets/comi.jpg'
-import Ferni from '../assets/ferni.jpg'
-import Plan from '../assets/plan.jpg'
-import Fp1 from "../assets/fp1.jpg"
-import Fp2 from "../assets/fp2.jpg"
-import Fp3 from "../assets/fp3.jpg"
-import Fp4 from "../assets/fp4.jpg"
-import offVideo from '../assets/offvideo.mp4'
 import ContactCard from './ContactCard'
 import Questions from './Questions'
 
 const Hero = () => {
 
   const service = [
-    { img: Resi, name: "Residential Interior Design" , description: "Transform your home into a stylish, comfortable, and functional living space tailored to your lifestyle."},
-    { img: Comi, name: "Commercial Interiors" , description: "Professional interior solutions that enhance productivity, customer experience, and brand identity."},
-    { img: Ferni, name: "Furniture & Decor" , description: "Custom-crafted furniture and décor elements that add personality and elegance to every space."},
-    { img: Plan, name: "Space Planning" , description: "Smart space planning that maximizes functionality while maintaining aesthetics and comfort."},
+    { img: "https://ik.imagekit.io/kaptaanjii/chicnest/main/resi_result.webp?updatedAt=1786015060337", name: "Residential Interior Design" , description: "Transform your home into a stylish, comfortable, and functional living space tailored to your lifestyle."},
+    { img: "https://ik.imagekit.io/kaptaanjii/chicnest/main/comi_result.webp?updatedAt=1786015059953", name: "Commercial Interiors" , description: "Professional interior solutions that enhance productivity, customer experience, and brand identity."},
+    { img: "https://ik.imagekit.io/kaptaanjii/chicnest/main/ferni_result.webp?updatedAt=1786015060321", name: "Furniture & Decor" , description: "Custom-crafted furniture and décor elements that add personality and elegance to every space."},
+    { img: "https://ik.imagekit.io/kaptaanjii/chicnest/main/plan_result.webp?updatedAt=1786015061238", name: "Space Planning" , description: "Smart space planning that maximizes functionality while maintaining aesthetics and comfort."},
 
   ]
   const review = [
@@ -98,7 +89,7 @@ const Hero = () => {
             data-aos="fade-up"
             >
               <img
-                src={Fp1}
+                src="https://ik.imagekit.io/kaptaanjii/chicnest/main/fp1_result.webp?updatedAt=1786015060123"
                 loading="lazy"
                 alt="Living Room"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -120,7 +111,7 @@ const Hero = () => {
             data-aos="fade-up"
             >
               <img
-                src={Fp2}
+                src="https://ik.imagekit.io/kaptaanjii/chicnest/main/fp2_result.webp?updatedAt=1786015060594"
                 loading="lazy"
                 alt="Bedroom"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -143,7 +134,7 @@ const Hero = () => {
             data-aos="fade-up"
             >
               <img
-                src={Fp3}
+                src="https://ik.imagekit.io/kaptaanjii/chicnest/main/fp3_result.webp?updatedAt=1786015060138"
                 loading="lazy"
                 alt="Kitchen"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -165,7 +156,7 @@ const Hero = () => {
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                // style={{ backgroundImage: `url(${Fp4})` }}
+                style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/off.webp?updatedAt=1786017129686")'}}
               />
               <video
                 autoPlay
@@ -173,9 +164,9 @@ const Hero = () => {
                 loop
                 playsInline
                 preload="metadata"
-              className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
                 >
-                  <source src={offVideo} type="video/mp4" />
+                  <source src="https://ik.imagekit.io/kaptaanjii/chicnest/OffVideo.mp4" type="video/mp4" />
                 </video>
                 <div className='bg-black/30 h-full w-full absolute'></div>
               <div className="relative z-10 h-full flex items-end p-6">

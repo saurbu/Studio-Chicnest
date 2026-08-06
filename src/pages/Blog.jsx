@@ -1,36 +1,4 @@
 import React, { useEffect, useState } from "react";
-import blogVideo from "../assets/blogVideo.mp4";
-import blog1 from "../assets/bl1.jpg";
-import blog2 from "../assets/bl2.jpg";
-import blog3 from "../assets/bl3.jpg";
-import blog4 from "../assets/bl4.jpg";
-import living1 from '../assets/living1.jpg'
-import living2 from '../assets/living2.jpg'
-import living3 from '../assets/living3.jpg'
-import living4 from '../assets/living4.jpg'
-import living5 from '../assets/living5.jpg'
-import living6 from '../assets/living6.jpg'
-import living7 from '../assets/living7.jpg'
-import fire1 from '../assets/fire1.jpg'
-import fire2 from '../assets/fire2.jpg'
-import fire3 from '../assets/fire3.jpg'
-import fire4 from '../assets/fire4.jpg'
-import fire5 from '../assets/fire5.jpg'
-import fire6 from '../assets/fire6.jpg'
-import rich1 from '../assets/rich1.jpg'
-import rich2 from '../assets/rich2.jpg'
-import rich3 from '../assets/rich3.jpg'
-import rich4 from '../assets/rich4.jpg'
-import rich5 from '../assets/rich5.jpg'
-import rich6 from '../assets/rich6.jpg'
-import trend1 from '../assets/trend1.jpg'
-import trend2 from '../assets/trend2.jpg'
-import trend3 from '../assets/trend3.jpg'
-import trend4 from '../assets/trend4.jpg'
-import trend5 from '../assets/trend5.jpg'
-import trend6 from '../assets/trend6.jpg'
-
-
 const Blog = () => {
 
   const [selectedBlog, setSelectedBlog] = useState(null);
@@ -48,7 +16,7 @@ const Blog = () => {
   const blogCards = [
   {
     type: "image",
-    image: blog1,
+    image: "https://ik.imagekit.io/kaptaanjii/chicnest/main/bl1_result.webp?updatedAt=1786015061559",
     title: "LIVING ROOM",
   },
   {
@@ -60,7 +28,7 @@ const Blog = () => {
   },
   {
     type: "image",
-    image: blog2,
+    image: "https://ik.imagekit.io/kaptaanjii/chicnest/main/bl2_result.webp?updatedAt=1786015059576",
     title: "Modern Fireplace Inspiration",
   },
   {
@@ -79,7 +47,7 @@ const Blog = () => {
   },
   {
     type: "image",
-    image: blog3,
+    image: "https://ik.imagekit.io/kaptaanjii/chicnest/main/bl3_result.webp?updatedAt=1786015061717",
     title: "Styling Guide",
   },
   {
@@ -91,7 +59,7 @@ const Blog = () => {
   },
   {
     type: "image",
-    image: blog4,
+    image: "https://ik.imagekit.io/kaptaanjii/chicnest/main/bl4_result.webp?updatedAt=1786015060450",
     title: "Design Trends",
   },
 ];
@@ -102,13 +70,14 @@ const blogs = [
     category:"Luxury Living Room",
     title:"Living Room",
     images:[
-      living1,
-      living2,
-      living3,
-      living4,
-      living5,
-      living6,
-      living7,
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living1_result.webp?updatedAt=1786015061767",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living2_result.webp?updatedAt=1786015061721",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living3_result.webp?updatedAt=1786015060668",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living4_result.webp?updatedAt=1786015061610",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living5_result.webp?updatedAt=1786015061323",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living6_result.webp?updatedAt=1786015060471",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/living7_result.webp?updatedAt=1786015061093",
+      
     ],
     shortDesc:"Discover elegant living room interiors that combine comfort, sophistication, and modern design to create a warm and inviting atmosphere.",
     content:[
@@ -123,12 +92,12 @@ const blogs = [
     category:"Luxury Fireplace",
     title:"Modern Fireplace Inspiration",
     images:[
-      fire1,
-      fire2,
-      fire3,
-      fire4,
-      fire5,
-      fire6,
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire1_result.webp?updatedAt=1786015062067",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire2_result.webp?updatedAt=1786015061725",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire3_result.webp?updatedAt=1786015061062",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire4_result.webp?updatedAt=1786015061149",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire5_result.webp?updatedAt=1786015060078",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/fire6_result.webp?updatedAt=1786015060073",
     ],
     shortDesc:"Explore contemporary fireplace designs that bring warmth, elegance, and a sophisticated focal point to modern living spaces.",
     content:[
@@ -146,12 +115,12 @@ const blogs = [
     category:"Rich Colors",
     title:"Styling Guide",
     images:[
-      rich1,
-      rich2,
-      rich3,
-      rich4,
-      rich5,
-      rich6,
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich1_result.webp?updatedAt=1786015061295",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich2_result.webp?updatedAt=1786015062022",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich3_result.webp?updatedAt=1786015061003",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich4_result.webp?updatedAt=1786015060579",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich5_result.webp?updatedAt=1786015061723",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/rich6_result.webp?updatedAt=1786015061765",
     ],
     shortDesc:"Learn how rich colors, luxurious textures, and thoughtful styling choices can transform ordinary interiors into elegant, timeless spaces.",
     content:[
@@ -169,12 +138,12 @@ const blogs = [
     category:"Trending",
     title:"Design Trends",
     images:[
-      trend1,
-      trend2,
-      trend3,
-      trend4,
-      trend5,
-      trend6,
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend1_result.webp?updatedAt=1786015061944",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend2_result.webp?updatedAt=1786015061062",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend3_result.webp?updatedAt=1786015061544",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend4_result.webp?updatedAt=1786015061649",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend5_result.webp?updatedAt=1786015061556",
+      "https://ik.imagekit.io/kaptaanjii/chicnest/main/trend6_result.webp?updatedAt=1786015061185",
     ],
     shortDesc:"Discover the latest kitchen and bedroom design trends that combine elegance, comfort, and functionality to create stylish, modern living spaces.",
     content:[
@@ -213,15 +182,18 @@ const blogs = [
 
   return (
     <div>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/blog.webp?updatedAt=1786017129804")'}}
+      >
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src={blogVideo} type="video/mp4" />
+          <source src="https://ik.imagekit.io/kaptaanjii/chicnest/BlogVideo.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/30"></div>

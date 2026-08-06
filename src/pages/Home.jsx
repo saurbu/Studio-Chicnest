@@ -1,8 +1,6 @@
 import React from 'react'
-import HeroBg from "../assets/herobg1.avif"
 import chk1h from '/chk1h.png'
 import Hero from '../components/Hero'
-import homeVideo from '../assets/homeVideo.mp4'
 import { MoveRight} from 'lucide-react'
 import { NavLink } from 'react-router-dom'
 
@@ -11,15 +9,17 @@ const Home = () => {
     <div className='bg-[#FDFBF8]'>
       <div
         className=" min-h-screen bg-cover w-full bg-center relative flex items-center justify-center "
+        style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/home.webp?updatedAt=1786017129566")'}}
       >
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute top-0 left-0 w-full h-full object-cover"
           >
-          <source src={homeVideo} type="video/mp4" />
+          <source src='https://ik.imagekit.io/kaptaanjii/chicnest/HomeVideo.mp4' type="video/mp4" />
         </video>
         <div className='bg-black/30 h-full w-full absolute'></div>
         <div

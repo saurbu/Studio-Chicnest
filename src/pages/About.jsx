@@ -1,6 +1,5 @@
 import React from 'react'
 import { Sparkles, Gem, ShieldCheck, HeartHandshake } from "lucide-react";
-import abtVideo from '../assets/abt.mp4'
 const About = () => {
 
   const values = [
@@ -31,15 +30,17 @@ const About = () => {
       {/* main */}
       <div
         className=" min-h-screen bg-cover w-full bg-center relative flex items-center justify-center "
+        style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/abt.webp")'}}
       >
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute top-0 left-0 w-full h-full object-cover"
           >
-          <source src={abtVideo} type="video/mp4" />
+          <source src="https://ik.imagekit.io/kaptaanjii/chicnest/AbtVideo.mp4" type="video/mp4" />
         </video>
         <div className='bg-black/30 h-full w-full absolute'></div>
         <div

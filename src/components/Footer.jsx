@@ -73,7 +73,7 @@ const Footer = () => {
         © {new Date().getFullYear()} STUDIO CHICNEST. All rights reserved.
         <p>||</p>
         <p>Design and Developed by <a href="https://saurbu.vercel.app/" 
-        className="text-red-500 text-xl" 
+        className="text-red-500 text-xl hover:text-2xl" 
         target="_blank"
         >"saurbu"</a></p>
       </div>

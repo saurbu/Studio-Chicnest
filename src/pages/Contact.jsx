@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import cntVideo from '../assets/cntVideo.mp4'
 import ContactCard from '../components/ContactCard'
 
 const Contact =   () => {
@@ -44,16 +43,17 @@ const Contact =   () => {
     >
       <div
         className=" min-h-screen bg-cover w-full bg-center relative flex items-center justify-center "
-        // style={{ backgroundImage: `url(${heroVideo})` }}
+        style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/cnt.webp")'}}
       >
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute top-0 left-0 w-full h-full object-cover"
           >
-          <source src={cntVideo} type="video/mp4" />
+          <source src="https://ik.imagekit.io/kaptaanjii/chicnest/CntVideo.mp4" type="video/mp4" />
         </video>
         <div className='bg-black/40 h-full w-full absolute'></div>
         <div

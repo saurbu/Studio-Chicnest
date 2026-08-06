@@ -1,5 +1,4 @@
 import React from 'react'
-import heroVideo2 from '../assets/heroVideo2.mp4'
 import { NavLink, Outlet } from 'react-router-dom'
 const Gallery = () => {
 
@@ -23,15 +22,17 @@ const Gallery = () => {
     <div>
       <div
         className=" min-h-screen bg-cover w-full bg-center relative flex items-center justify-center "
+        style={{ backgroundImage: 'url("https://ik.imagekit.io/kaptaanjii/chicnest/poster/gal.webp?updatedAt=1786017129724")'}}
       >
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           className="absolute top-0 left-0 w-full h-full object-cover"
           >
-          <source src={heroVideo2} type="video/mp4" />
+          <source src="https://ik.imagekit.io/kaptaanjii/chicnest/GalleryVideo.mp4" type="video/mp4" />
         </video>
         <div className='bg-black/30 h-full w-full absolute'></div>
         <div
